@@ -7,7 +7,7 @@
 
 # Site Settings
 locale                   : "en-US"
-title                    : "Marckwei"
+title                    : "marckwei"
 title_separator          : "-"
 name                     : &name "Xiangwei Zhang"
 description              : &description "Graduate student at Tianjin University"
