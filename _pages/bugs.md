@@ -7,17 +7,51 @@ author_profile: true
 
 {% include base_path %}
 
-Underway
-======
-Recently, I've turned my attention to **WebAssembly**, which I think has a lot of potential and is now supported by all major browsers. 
 
-Therefore, it will be the next focus of my research. I've implemented a tool to fuzz WebAssembly parts of browsers, based on an idea presented at [Black Hat Asia 2023](https://www.blackhat.com/asia-23/briefings/schedule/#attacking-the-webassembly-compiler-of-webkit-30926). 
-My tool has detected 9 unique crashes in JavaScriptCore and SpiderMonkey in their WebAssembly parts, all of which have been identified as vulnerabilities by the vendors. 
 
-However, I'm relatively new to exploiting WebAssembly vulnerabilities, and I don't know how to do anything with them yet. If you are interested in WebAssembly, please feel free to contact me.
+## Bug Showcase
+Here's a list of some of the bugs I found.
 
-Finished
-======
-[FuzzJIT](https://github.com/SpaceNaN/fuzzjit): It is a fuzzing tool for JavaScript engines JIT compiler, built on top of Fuzzilli. I was the only student involved in this project. The main contributors to this work are my mentor and zhiyi. I was responsible for some of the experimental parts of this project, including the code coverage comparison test.
+#### WebKit/JavaScriptCore
+* [Issue 255715](https://bugs.webkit.org/show_bug.cgi?id=255715): ASSERTION FAILED: edge->hasResult() in DFG::{anonymous}::Validate::validate()
+* [Issue 255582](https://bugs.webkit.org/show_bug.cgi?id=255582): FunctionBind should fill BoundThis
+* [Issue 254574](https://bugs.webkit.org/show_bug.cgi?id=254574): Fix handleRecursiveTailCall for osr exit at op_tail_call
+* [Issue 245066](https://bugs.webkit.org/show_bug.cgi?id=245066): Array literal parsing should lex StringLiteral in the end of parsing
+* [CVE-2020-9983](https://bugs.webkit.org/show_bug.cgi?id=215536): B3 IntRange is incorrect for negative masks
+ 
+#### WebKit/WebAssembly
+After communicating with WebKit's maintenance team, I was informed that they do not consider it a high priority to fix these bugs due to the additional runtime parameters they need to add to trigger the bugs. 
 
-[PatchFuzz](https://github.com/marckwei/patchFuzz): I am the major contributor to this project, and the code will be available to the public after the paper has been accepted.
+Therefore, even though they are marked as bugs, they will not be fixed in the near future.
+
+* [Issue 258499](https://bugs.webkit.org/show_bug.cgi?id=258499): WebAssemblyGC is not ready yet.
+* [Issue 258795](https://bugs.webkit.org/show_bug.cgi?id=258795): WebAssemblyGC is not ready yet.
+* [Issue 258796](https://bugs.webkit.org/show_bug.cgi?id=258796): WebAssemblyGC is not ready yet.
+* [Issue 258801](https://bugs.webkit.org/show_bug.cgi?id=258801): WebAssemblyGC is not ready yet.
+* [Issue 258804](https://bugs.webkit.org/show_bug.cgi?id=258804): WebAssemblyGC is not ready yet.
+* [Issue 258805](https://bugs.webkit.org/show_bug.cgi?id=258805): WebAssemblyGC is not ready yet.
+
+
+#### Firefox/WebAssembly
+Contrary to the attitude of the WebKit maintenance team, the bug I submitted to Firefox was quickly identified and fixed two weeks later, and the relevant code will be merged into the firefox118 branch.
+
+* [Issue 1843295](https://bugzilla.mozilla.org/show_bug.cgi?id=1843295): \[WASM-GC\] Failure to serialize/deserialize type subtype declaration (Will be fixed in Firefox 118).
+* [Issue 1845436](https://bugzilla.mozilla.org/show_bug.cgi?id=1845436): \[WASM-GC\] Canonical types should use type index of first occurence in module (Will be fixed in Firefox 118).
+
+#### [JerryScript](https://github.com/jerryscript-project/jerryscript)
+
+- [CVE-2021-41751](https://github.com/jerryscript-project/jerryscript/pull/4797): In the Array.slice method when the engine uses fast arrays the "end" value was not updated if the input array's length changed.(Same as CVE-2016-4622)
+- [CVE-2023-30406](https://github.com/jerryscript-project/jerryscript/issues/5058): Assertion 'ecma_get_lex_env_type (lex_env_p) == ECMA_LEXICAL_ENVIRONMENT_DECLARATIVE' failed
+- [Issue 5057](https://github.com/jerryscript-project/jerryscript/issues/5057): Unstable segmentation fault
+- [Issue 5052](https://github.com/jerryscript-project/jerryscript/issues/5052): Stack-overflow in ecma_op_function_construct
+- [Issue 5051](https://github.com/jerryscript-project/jerryscript/issues/5051): Stack-overflow  in vm_loop
+
+#### [Tengine](https://github.com/OAID/Tengine)
+- [CVE-2020-28759](https://github.com/OAID/Tengine/issues/476): Constructed malicious input leading to a buffer overflow utilizing poor format checking
+
+#### Some small targets
+- [CVE-2020-1914](https://github.com/armink/struct2json/issues/13): Unsafe use of the `strcpy` function
+- [CVE-2020-35242,CVE-2020-35243,CVE-2020-35244,CVE-2020-35245](https://github.com/balloonwj/flamingo/issues/47): SQL injection
+- [CVE-2021-28013](https://github.com/qinguoyi/TinyWebServer/issues/45): SQL injection
+- [CVE-2021-28015](https://github.com/qinguoyi/TinyWebServer/issues/45): the length of a sql statement is not limited, causing heap overflow
+- [CVE-2021-28014](https://github.com/qinguoyi/TinyWebServer/issues/45): the length of a input is not limited, causing stack overflow
