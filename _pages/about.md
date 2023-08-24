@@ -1,6 +1,6 @@
 ---
 permalink: /
-title: "About me"
+title: "ABOUT ME"
 excerpt: "About me"
 author_profile: true
 redirect_from: 
@@ -13,7 +13,7 @@ My research focuses on designing effective methods to discover security vulnerab
 
 With my mentor and I working together, we have got some small achievements in the field of **browser** vulnerability hunting, including tens of thousands of dollars in bounties as well as academic papers.
 
-# Publications
+# PUBLICATIONS
 ***PatchFuzz: Patch Fuzzing for JavaScript Engines.*** (Waiting for notification)<br>
 Junjie Wang, **Xiangwei Zhang**, Xiaoning Du, Yuhan Ma, Sen Chen
 

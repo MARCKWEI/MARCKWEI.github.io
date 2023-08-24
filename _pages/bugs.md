@@ -32,12 +32,12 @@ Therefore, even though they are marked as bugs, they will not be fixed in the ne
 ### Firefox/WebAssembly
 Contrary to the attitude of the WebKit maintenance team, the bug I submitted to Firefox was quickly identified and fixed two weeks later, and the relevant code will be merged into the firefox118 branch.
 
-* [Issue 1843295](https://bugzilla.mozilla.org/show_bug.cgi?id=1843295): \[WASM-GC\] Failure to serialize/deserialize type subtype declaration (Will be merged in Firefox 118).
-* [Issue 1845436](https://bugzilla.mozilla.org/show_bug.cgi?id=1845436): \[WASM-GC\] Canonical types should use type index of first occurence in module (Will be merged in Firefox 118).
+* [Issue 1843295](https://bugzilla.mozilla.org/show_bug.cgi?id=1843295): \[WASM-GC\] Failure to serialize/deserialize type subtype declaration (will be merged in Firefox 118).
+* [Issue 1845436](https://bugzilla.mozilla.org/show_bug.cgi?id=1845436): \[WASM-GC\] Canonical types should use type index of first occurence in module (will be merged in Firefox 118).
 
 ### [JerryScript](https://github.com/jerryscript-project/jerryscript)
 
-- [CVE-2021-41751](https://github.com/jerryscript-project/jerryscript/pull/4797): In the Array.slice method when the engine uses fast arrays the "end" value was not updated if the input array's length changed (Same as CVE-2016-4622).
+- [CVE-2021-41751](https://github.com/jerryscript-project/jerryscript/pull/4797): In the Array.slice method when the engine uses fast arrays the "end" value was not updated if the input array's length changed (as same as CVE-2016-4622).
 - [CVE-2023-30406](https://github.com/jerryscript-project/jerryscript/issues/5058): Assertion 'ecma_get_lex_env_type (lex_env_p) == ECMA_LEXICAL_ENVIRONMENT_DECLARATIVE' failed.
 - [Issue 5057](https://github.com/jerryscript-project/jerryscript/issues/5057): Unstable segmentation fault.
 - [Issue 5052](https://github.com/jerryscript-project/jerryscript/issues/5052): Stack-overflow in ecma_op_function_construct.
