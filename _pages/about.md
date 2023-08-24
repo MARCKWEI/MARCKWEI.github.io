@@ -15,7 +15,7 @@ With my mentor and I working together, we have got some small achievements in th
 
 # Publications
 ***PatchFuzz: Patch Fuzzing for JavaScript Engines.*** (Waiting for notification)<br>
-Junjie Wang, **Xiangwei Zhang**, Xiaoning Du, Yuhan Ma, Sen Chen \| Link
+Junjie Wang, **Xiangwei Zhang**, Xiaoning Du, Yuhan Ma, Sen Chen
 
 ***An Empirical Study on AST-level mutation-based fuzzing techniques for JavaScript Engines.*** (Internetware 2023)<br>
 Song Tang, Shuang Liu, Junjie Wang, **Xiangwei Zhang** \| [Link](https://conf.researchr.org/details/internetware-2023/internetware-2023-papers/3/An-Empirical-Study-on-AST-level-mutation-based-fuzzing-techniques-for-JavaScript-Engi)
