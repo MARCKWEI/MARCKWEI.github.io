@@ -7,7 +7,7 @@ author_profile: true
 
 {% include base_path %}
 
-Here's a list of some of the bugs I found.
+Here are some of the bugs I found
 
 ### WebKit/JavaScriptCore
 * [Issue 255715](https://bugs.webkit.org/show_bug.cgi?id=255715): ASSERTION FAILED: edge->hasResult() in DFG::{anonymous}::Validate::validate().
@@ -21,13 +21,7 @@ After communicating with WebKit's maintenance team, I was informed that they do 
 
 Therefore, even though they are marked as bugs, they will not be fixed in the near future.
 
-* [Issue 258499](https://bugs.webkit.org/show_bug.cgi?id=258499): WebAssemblyGC is not ready yet.
-* [Issue 258795](https://bugs.webkit.org/show_bug.cgi?id=258795): WebAssemblyGC is not ready yet.
-* [Issue 258796](https://bugs.webkit.org/show_bug.cgi?id=258796): WebAssemblyGC is not ready yet.
-* [Issue 258801](https://bugs.webkit.org/show_bug.cgi?id=258801): WebAssemblyGC is not ready yet.
-* [Issue 258804](https://bugs.webkit.org/show_bug.cgi?id=258804): WebAssemblyGC is not ready yet.
-* [Issue 258805](https://bugs.webkit.org/show_bug.cgi?id=258805): WebAssemblyGC is not ready yet.
-
+* Issue 258499，258795，258796，258801，258804，258805: WebAssemblyGC is not ready yet
 
 ### Firefox/WebAssembly
 Contrary to the attitude of the WebKit maintenance team, the bug I submitted to Firefox was quickly identified and fixed two weeks later, and the relevant code will be merged into the firefox118 branch.
