@@ -14,8 +14,8 @@ Here are some of the bugs I found.
 * [Issue 255582](https://bugs.webkit.org/show_bug.cgi?id=255582): FunctionBind should fill BoundThis.
 * [Issue 254574](https://bugs.webkit.org/show_bug.cgi?id=254574): Fix handleRecursiveTailCall for osr exit at op_tail_call.
 * [Issue 245066](https://bugs.webkit.org/show_bug.cgi?id=245066): Array literal parsing should lex StringLiteral in the end of parsing.
-* [CVE-2020-9983](https://bugs.webkit.org/show_bug.cgi?id=215536): B3 IntRange is incorrect for negative masks (which can be used to bypass the fix for [CVE-2020-9802](https://xz.aliyun.com/t/8913)).
- 
+* [CVE-2020-9983](https://bugs.webkit.org/show_bug.cgi?id=215536): [B3 IntRange is incorrect for negative masks](https://commits.webkit.org/228424@main) (which can be used to bypass the fix for [CVE-2020-9802](https://xz.aliyun.com/t/8913)).
+
 ### WebKit/WebAssembly
 After communicating with WebKit's maintenance team, I was informed that they do not consider it a high priority to fix these bugs due to the additional runtime parameters they need to add to trigger the bugs. 
 
