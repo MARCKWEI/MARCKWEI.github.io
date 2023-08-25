@@ -7,7 +7,7 @@ author_profile: true
 
 {% include base_path %}
 
-Here are some of the bugs I found
+Here are some of the bugs I found.
 
 ### WebKit/JavaScriptCore
 * [Issue 255715](https://bugs.webkit.org/show_bug.cgi?id=255715): ASSERTION FAILED: edge->hasResult() in DFG::{anonymous}::Validate::validate().
