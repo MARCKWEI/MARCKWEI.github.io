@@ -19,7 +19,7 @@ I'm unfamiliar with the WebAssembly vulnerability exploit, so I don't know how t
 
 ## FINISHED
 
-[PatchFuzz](https://github.com/marckwei/patchFuzz): I am the major contributor to this project, and the code will be available to the public after the paper has been accepted.
+[PatchFuzz](https://github.com/marckwei/patchFuzz): I am a major contributor to this project, and the code will be available to the public after the paper has been accepted.
 
 [FuzzJIT](https://github.com/SpaceNaN/fuzzjit): It is a fuzzing tool for JavaScript engines JIT compiler, built on top of Fuzzilli. I was the only student involved in this project. The main contributors to this work are [my mentor](https://zhunki.github.io/index.html) and zhiyi. I was responsible for the calculation of some evaluative metrics, such as code coverage. I also used FuzzJIT to find several interesting logic bugs.
 
