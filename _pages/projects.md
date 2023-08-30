@@ -30,8 +30,8 @@ Here are two bugs to share.
 </tr>
 <tr>
 <td>
-  
-```JavaScript
+<pre>
+
 const ITERATIONS=1000000;
 function f(n){
 	n&=0xffffffff
@@ -54,11 +54,13 @@ for(let i=0;i<ITERATIONS;i++){
 	}
 	f(n);
 }
-``` 
+
+</pre>
 </td>
 <td>
 
-```JavaScript
+<pre>
+
 const ITERATIONS=1000000;
 function f(n){
 	n&=0xffffffff-1
@@ -81,7 +83,8 @@ for(let i=0;i<ITERATIONS;i++){
 	}
 	f(n);
 }
-```
+
+</pre>
 
 </td>
 </tr>
@@ -107,7 +110,7 @@ print(opt()); // output: 0
 %OptimizeFunctionOnNextCall(opt);
 print(opt()); // output: 666
 ```
-2. jsc_issue_228068
+1. jsc_issue_228068
 ```javascript
 function opt() {
 return parseInt ("−0");
