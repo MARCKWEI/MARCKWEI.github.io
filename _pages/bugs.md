@@ -41,7 +41,7 @@ Contrary to the attitude of the WebKit maintenance team, the bug I submitted to 
 - [CVE-2020-28759](https://github.com/OAID/Tengine/issues/476): Constructed malicious input leading to a buffer overflow utilizing poor format checking.
 
 ### Some small targets
-- [CVE-2020-1914](https://github.com/armink/struct2json/issues/13): Unsafe use of the `strcpy` function.
+- [CVE-2020-29203](https://github.com/armink/struct2json/issues/13): Unsafe use of the `strcpy` function.
 - [CVE-2020-35242, CVE-2020-35243, CVE-2020-35244, CVE-2020-35245](https://github.com/balloonwj/flamingo/issues/47): SQL injection.
 - [CVE-2021-28013](https://github.com/qinguoyi/TinyWebServer/issues/45): SQL injection.
 - [CVE-2021-28015](https://github.com/qinguoyi/TinyWebServer/issues/45): the length of a sql statement is not limited, causing heap overflow.
