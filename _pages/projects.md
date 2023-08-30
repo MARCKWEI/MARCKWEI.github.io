@@ -18,8 +18,11 @@ My tool has found 6 and 2 WebAssembly-related bugs in JavaScriptCore and SpiderM
 I'm unfamiliar with the WebAssembly vulnerability exploit, so I don't know how to do anything with them yet. 
 
 ## FINISHED
-
+### PatchFuzz: Patch Fuzzing for JavaScript Engines
 [PatchFuzz](https://github.com/marckwei/patchFuzz): I am a major contributor to this project, and the code will be available to the public after the paper has been accepted.
+
+The workflow of PatchFuzz:
+![The workflow of PatchFuzz.](/images/patchfuzz_workflow.png)
 
 Here are two bugs to share.
 
@@ -86,10 +89,10 @@ for(let i=0;i<ITERATIONS;i++){
 </tr>
 </table>
 
-
+### FuzzJIT: Oracle-Enhanced Fuzzing for JavaScript Engine JIT Compiler
 [FuzzJIT](https://github.com/SpaceNaN/fuzzjit): It is a fuzzing tool for JavaScript engines JIT compiler, built on top of Fuzzilli. I was the only student involved in this project. The main contributors to this work are [my mentor](https://zhunki.github.io/index.html) and zhiyi. I was responsible for the calculation of some evaluative metrics, such as code coverage. I also used FuzzJIT to find several interesting logic bugs.
 
-
+The workflow of FuzzJIT:
 ![The workflow of FuzzJIT.](/images/fuzzjit_workflow.png)
 
 Here are two bugs to share.
@@ -110,7 +113,7 @@ print(opt()); // output: 0
 %OptimizeFunctionOnNextCall(opt);
 print(opt()); // output: 666
 ```
-1. jsc_issue_228068
+2. jsc_issue_228068
 ```javascript
 function opt() {
 return parseInt ("−0");
