@@ -24,7 +24,7 @@ I'm unfamiliar with the WebAssembly vulnerability exploit, so I don't know how t
 The workflow of PatchFuzz:
 ![The workflow of PatchFuzz.](/images/patchfuzz_workflow.png)
 
-Here are two bugs to share.
+Here are two bugs to share:
 
 <table>
 <tr>
@@ -95,7 +95,7 @@ for(let i=0;i<ITERATIONS;i++){
 The workflow of FuzzJIT:
 ![The workflow of FuzzJIT.](/images/fuzzjit_workflow.png)
 
-Here are two bugs to share.
+Here are two bugs to share:
 
 1. v8_unsigned_number_optimization (I forgot to submit it.)
 ```javascript
