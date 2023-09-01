@@ -63,7 +63,7 @@ for(let i=0;i<ITERATIONS;i++){
 <pre>
 const ITERATIONS=1000000;
 function f(n){
-	n&=0xffffffff-1
+	n&=<font color="red">0xffffffff-1</font>
 	if(n<-1){
 		let v=(-n)&0xffffffff;
 		let i=Math.abs(n);
