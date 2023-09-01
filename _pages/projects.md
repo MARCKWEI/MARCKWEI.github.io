@@ -90,7 +90,7 @@ for(let i=0;i<ITERATIONS;i++){
 </table>
 
 ### FuzzJIT: Oracle-Enhanced Fuzzing for JavaScript Engine JIT Compiler
-[FuzzJIT](https://github.com/SpaceNaN/fuzzjit): It is a fuzzing tool for JavaScript engines JIT compiler, built on top of Fuzzilli. I was the only student involved in this project. The main contributors to this work are [my mentor](https://zhunki.github.io/index.html) and zhiyi. I was responsible for the calculation of some evaluative metrics, such as code coverage. I also used FuzzJIT to find several interesting logic bugs.
+[FuzzJIT](https://github.com/SpaceNaN/fuzzjit): It is a fuzzing tool for JavaScript engines JIT compiler, built on top of [Fuzzilli](https://github.com/googleprojectzero/fuzzilli). I was the only student involved in this project. The main contributors to this work are [my mentor](https://zhunki.github.io/index.html) and zhiyi. I was responsible for the calculation of some evaluative metrics, such as code coverage. I also used FuzzJIT to find several interesting logic bugs.
 
 The workflow of FuzzJIT:
 ![The workflow of FuzzJIT.](/images/fuzzjit_workflow.png)
