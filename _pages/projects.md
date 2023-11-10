@@ -10,14 +10,18 @@ author_profile: true
 
 ## UNDERWAY
 
-Recently, I've turned my attention to **WebAssembly**, which I think has a lot of potential and is now supported by all major browsers.
-
-I've implemented a tool to fuzz the WebAssembly compiler of browsers, based on an idea presented at [Black Hat Asia 2023](https://www.blackhat.com/asia-23/briefings/schedule/#attacking-the-webassembly-compiler-of-webkit-30926). 
-My tool has found 6 and 2 WebAssembly-related bugs in JavaScriptCore and SpiderMonkey, respectively.
-
-I'm unfamiliar with the WebAssembly vulnerability exploit, so I don't know how to do anything with them yet. 
 
 ## FINISHED
+### WasmCFuzz: Structure-aware Fuzzing for Wasm Compilers
+Recently, I've turned my attention to **WebAssembly**, which I think has a lot of potential and is now supported by all major browsers.
+I have implemented a generation-based fuzzer based on the file structure of wasm binary to fuzz the WebAssembly compiler of browsers.
+
+My tool has found 9 and 3 WebAssembly-related bugs in JavaScriptCore and SpiderMonkey, respectively.
+
+The workflow of WasmCFuzz:
+![The workflow of PatchFuzz.](/images/wasm_workflow.png)
+
+
 ### PatchFuzz: Patch Fuzzing for JavaScript Engines
 [PatchFuzz](https://github.com/marckwei/patchFuzz): I am a major contributor to this project, and the code will be available to the public after the paper has been accepted.
 
